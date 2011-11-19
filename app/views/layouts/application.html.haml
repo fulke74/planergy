@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>PlanergyKft</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+!!!
+%html
+  %head
+    %title PlanergyKft
+    
+    / = stylesheet_link_tag 'compass_bootstrap.csss', :media => 'screen, projection'
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body.bp
+    = yield
 
-<%= yield %>
-
-</body>
-</html>

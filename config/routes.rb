@@ -1,4 +1,8 @@
 PlanergyKft::Application.routes.draw do
+  get "fololdal/index"
+
+  get "fooldal/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
