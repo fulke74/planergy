@@ -10,6 +10,13 @@
     = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body.bp
-    = yield
-
+  %body.bp.two-col
+    #container
+      #header
+        pLAnergy Kft.
+      = yield
+      #footer                          
+        %p
+          Készítette: Feil Ferenc, pLAnergy Kft. minden jog fenntartva 
+          = @date
+      

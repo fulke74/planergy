@@ -7,6 +7,7 @@
 // Import the non-default scaffolding module.
 @import blueprint/scaffolding
 
+
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -28,19 +29,23 @@ form.bp
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col
+
   #container
     +container
   #header, #footer
     +column($blueprint-grid-columns)
+    :background #ccc
+    :height 30px
+    :color green
+    
   #sidebar
     // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    $sidebar-columns: floor($blueprint-grid-columns / 3)
+    $sidebar-columns: floor($blueprint-grid-columns / 6)
     +column($sidebar-columns)
   #content
     // Two thirds of the grid columns, rounding up.
     // With 24 cols, this is 16.
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3)
+    $content-columns: ceil(5 * $blueprint-grid-columns / 6)
     // true means it's the last column in the row
     +column($content-columns, true)
-
-
+    :HEIGHT 500px
